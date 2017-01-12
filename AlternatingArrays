@@ -1,0 +1,25 @@
+/* Swift Coding Warmup - Alternating Arrays
+12 JANUARY 2017 by Mark Price
+Write a function that combines two arrays by alternatingly taking elements.
+For example: given the two arrays ["a", "b", "c] and ["bo", "ro", "me"], 
+the function should return ["a", "bo", "b", "ro", "c", "me"].
+*/
+//Coding Warmup - Alternating Arrays
+var arrayOne =  ["a", "b", "c", "d", "e", "f"]
+var arrayTwo =   ["bo", "ro", "me", "5"]
+func AlternateArrays (arr1 : Array<Any>, arr2: Array<Any>) -> Array<Any>{
+    var alternatingArray = [Any]()
+    let maxIndex = max(arr1.count, arr2.count)
+    for i in 0..<maxIndex{
+        if (i < arr1.count){
+            alternatingArray.append(arr1[i])
+        }
+        if (i < arr2.count) {
+            alternatingArray.append(arr2[i])
+        }
+    
+    }
+    return alternatingArray
+}
+
+AlternateArrays(arr1: arrayOne, arr2: arrayTwo)
